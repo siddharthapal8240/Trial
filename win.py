@@ -232,7 +232,7 @@ def plot_kundli(house_labels, planets_in_houses, ascendants):
 
 # Main program
 def main():
-    st.title("🔮 Kundali Generator 🔮")
+    st.title("🔮 SoulBuddy-AI-Powered Spiritual Guide🔮")
     
     name = st.text_input("Enter your name:")
     dob = st.date_input("Enter your Date of Birth (YYYY-MM-DD):")
