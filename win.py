@@ -7,6 +7,8 @@ from matplotlib.patches import Polygon
 from dotenv import load_dotenv
 import os
 
+port = os.environ.get("PORT", 8501)
+
 # Load environment variables from the .env file
 load_dotenv()
 
