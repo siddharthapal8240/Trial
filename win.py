@@ -232,7 +232,7 @@ def plot_kundli(house_labels, planets_in_houses, ascendants):
 
 # Main program
 def main():
-    st.title("🔮 SoulBuddy-AI-Powered Spiritual Guide🔮")
+    st.title("🔮 SoulBuddy-AI-Powered Spiritual Guide 🔮")
     
     name = st.text_input("Enter your name:")
     dob = st.date_input("Enter your Date of Birth (YYYY-MM-DD):")
@@ -272,6 +272,10 @@ def main():
         st.write(f"🕒 Time of Birth: {tob.strftime('%H:%M:%S')}")
         st.write(f"📍 Birth Location: {city}, {state} (Lat: {lat}, Lon: {lon})")
 
+
+        # Plot the Kundli chart
+        plot_kundli(house_labels, planets_in_houses, ascendants)
+        
         st.write("\n🌟 All Ascendants (Lagna):")
         for house, asc in ascendants.items():
             st.write(f"House {house}: {asc}")
@@ -308,8 +312,7 @@ def main():
         for advice in guidance:
             st.write(f"- {advice}")
 
-        # Plot the Kundli chart
-        plot_kundli(house_labels, planets_in_houses, ascendants)
+        
 
 # Run the program
 if __name__ == "__main__":
